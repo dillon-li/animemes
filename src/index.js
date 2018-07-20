@@ -2,7 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App/App';
 import Homepage from './components/Homepage/Homepage'
+import Display from './components/Display/Display'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-ReactDOM.render(
-  <Homepage />, document.getElementById('root')
-);
+ReactDOM.render((
+  <Router>
+    <div>
+      <Route exact path='/' component={Homepage} />
+      <Route path='/display' component={Display} />
+    </div>
+  </Router>
+),document.getElementById('root'));
