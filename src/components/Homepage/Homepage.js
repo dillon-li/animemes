@@ -34,9 +34,6 @@ export default class Homepage extends Component {
                 <a href="/display">
                   <button type="button">CLICK FOR GREATNESS</button>
                 </a>
-                <a href="/test">
-                  <button type="button">CLICK FOR TEST</button>
-                </a>
               </header>
 
               <section class="wrapper style5">
