@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Button, Col, Row, Container } from 'reactstrap';
 
 import WebM from './WebM'
@@ -8,45 +9,46 @@ class Display extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      works: [],
-      webfile: 'someString',
+      url_list: [],
+      url: 'someString',
       buttonText: 'Begin Your Journey',
       displaying: false
     }
   }
-/*
+
   componentDidMount() {
     fetch('/getMemes')
       .then(res => res.json())
-      .then(works => this.setState({ works }));
+      .then(url_list => {
+        this.setState({ url_list: url_list })
+      })
   }
 
   // Get that randomness for intense MEMEage
   displayMemes() {
-    var webfiles = this.state.works[0].urls
-    console.log(webfiles.length)
+    var webfiles = this.state.url_list[0].urls
+    //console.log(webfiles)
     const item = webfiles[Math.floor(Math.random()*webfiles.length)];
-    console.log(item.toString())
-    const urlString = "../../images/webms/" + item.toString()
+    // console.log(item.toString())
+    // const item = webfiles[Math.floor(Math.random()*webfiles.length)];
+    // console.log(item.toString())
+    // const urlString = "../../images/webms/" + item.toString()
+    // this.setState (
+    //   {
+    //     webfile: urlString,
+    //     buttonText: 'More Memes',
+    //     displaying: true
+    //   }
+    // );
     this.setState (
       {
-        webfile: urlString,
+        url: item.toString(),
         buttonText: 'More Memes',
         displaying: true
       }
     );
   }
-*/
 
-  render() {
-    return(
-    <div>
-      This is Display HTML
-    </div>
-  );
-  }
-
-/*
   render() {
     console.log(this.state)
     const displaying = this.state.displaying
@@ -61,7 +63,7 @@ class Display extends Component {
         </Button>
         <Row>
         <Col>
-        <WebM url={this.state.webfile}></WebM>
+        <WebM url={this.state.url}></WebM>
         </Col>
         <Col>
           <Button color="danger" block>DANK</Button>
@@ -81,13 +83,13 @@ class Display extends Component {
             color="primary">
             {this.state.buttonText}
           </Button>
-          <WebM url={this.state.webfile}></WebM>
+          <WebM url={this.state.url}></WebM>
         </Container>
         </div>
       );
     }
   }
-  */
+
 }
 
 
