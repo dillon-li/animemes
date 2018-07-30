@@ -3,9 +3,11 @@ import { Media } from 'reactstrap'
 import ReactPlayer from 'react-player'
 
 class WebM extends Component {
+  /*
   constructor(props) {
     super(props);
   }
+  */
 
   render() {
     return (

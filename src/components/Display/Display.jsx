@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Button, Col, Row, Container } from 'reactstrap';
 
 import WebM from './WebM'
@@ -10,7 +9,7 @@ class Display extends Component {
     super(props)
     this.state = {
       url_list: [],
-      url: 'someString',
+      url: '',
       buttonText: 'Begin Your Journey',
       displaying: false
     }
