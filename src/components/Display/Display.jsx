@@ -48,6 +48,12 @@ class Display extends Component {
       }
     );
   }
+  /* Add back in eventually
+  <Col>
+    <Button color="danger" block>DANK</Button>
+    <Button color="primary" block>Not Dank</Button>
+  </Col>
+  */
 
   render() {
     console.log(this.state)
@@ -61,14 +67,12 @@ class Display extends Component {
           color="primary">
           {this.state.buttonText}
         </Button>
+        <br/><br/>
         <Row>
         <Col>
         <WebM url={this.state.url}></WebM>
         </Col>
-        <Col>
-          <Button color="danger" block>DANK</Button>
-          <Button color="primary" block>Not Dank</Button>
-        </Col>
+
         </Row>
       </Container>
       </div>
